@@ -21,6 +21,11 @@ int main()
 
 	delete(cat_1);
 
+	//Exercise 3: Strings and things
+	{
+		string name = "Sev";
+	}
+	
 
 	_CrtDumpMemoryLeaks();
 
