@@ -26,6 +26,13 @@ int main()
 		string name = "Sev";
 	}
 	
+	//Exercise 4: known data type and a function
+
+	int* ptr = new int; 
+
+	*ptr = 4;  
+	cout << *ptr << endl;
+
 
 	_CrtDumpMemoryLeaks();
 
