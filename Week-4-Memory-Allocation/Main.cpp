@@ -8,8 +8,7 @@ class CModule
 {
 private : 
 
-	string moduleName; 
-	float moduleMark;
+	CModule* modules[4];
 
 public:
 
@@ -60,9 +59,17 @@ int main()
 
 void CModule::setModule(string Name, float Mark)
 {
-	moduleName = Name; 
-	moduleMark = Mark;
+	for (int i = 0; i < 4; i++) 
+	{
+		modules[i] = new CModule;
+	
+	
+	}
+
+
 }
+
+
 
 void CModule::outPutModule()
 {
