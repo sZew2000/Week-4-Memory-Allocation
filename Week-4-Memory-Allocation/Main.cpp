@@ -19,6 +19,8 @@ int main()
 	cat_1->name = "sev"; 
 	cat_1->age = 25;
 
+	delete(cat_1);
+
 
 	_CrtDumpMemoryLeaks();
 
