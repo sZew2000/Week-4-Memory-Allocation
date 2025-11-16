@@ -3,6 +3,8 @@
 #include <iostream>
 using namespace std; 
 
+void changeInt(int* ptr);
+
 struct cat
 {
 	string name;
@@ -32,8 +34,19 @@ int main()
 
 	*ptr = 4;  
 	cout << *ptr << endl;
+	changeInt(ptr);
+	cout << *ptr << endl;
+
+	delete(ptr);
 
 
 	_CrtDumpMemoryLeaks();
+
+}
+
+void changeInt(int* ptr)
+{
+
+	*ptr = 10;
 
 }
