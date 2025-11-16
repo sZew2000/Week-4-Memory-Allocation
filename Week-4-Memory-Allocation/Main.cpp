@@ -4,6 +4,7 @@
 using namespace std; 
 
 void changeInt(int* ptr);
+void cancel(int* ptr_1, int* ptr_2);
 
 struct cat
 {
@@ -42,11 +43,39 @@ int main()
 
 	_CrtDumpMemoryLeaks();
 
+	// Exercise 5: cancel
+
+	int* ptr_1 = new int; 
+	int* ptr_2 = new int; 
+	*ptr_1 = 10; 
+	*ptr_2 = 30;
+	
+	cout << *ptr_1 << " " << *ptr_2 << endl;
+	cancel(ptr_1, ptr_2);
+	cout << *ptr_1 << " " << *ptr_2 << endl;
+
+	delete(ptr_1, ptr_2);
+
 }
 
 void changeInt(int* ptr)
 {
 
 	*ptr = 10;
+
+}
+
+void cancel(int* ptr_1, int* ptr_2)
+{
+	if (*ptr_1 < *ptr_2)
+	{
+		*ptr_1 = 0;
+	}
+	else
+	{
+		*ptr_2 = 0;
+	}
+
+
 
 }
